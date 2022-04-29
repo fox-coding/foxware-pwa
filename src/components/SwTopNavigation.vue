@@ -1,6 +1,6 @@
 <template>
   <ul
-    class="hidden lg:flex mt-2 lg:items-center lg:w-auto"
+    class="hidden lg:flex lg:items-center lg:w-auto"
     data-test-id="sw-top-navigation"
     v-if="visibleCategories && visibleCategories.length"
   >
