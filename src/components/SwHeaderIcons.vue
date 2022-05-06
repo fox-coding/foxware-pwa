@@ -30,9 +30,9 @@
       </SwButton>
       <SwPluginSlot name="top-header-icons-after" />
     </div>
-     <div class="h-full account-icon hidden xl:flex items-center px-12 border-l border-blue-200 font-semibold font-heading text-white" @mouseleave="closeDropdown">
+     <div class="h-full account-icon hidden xl:flex items-center pl-12 border-l border-blue-200 font-semibold font-heading text-white" @mouseleave="closeDropdown">
         <SwButton
-          class="flex items-center h-full sf-button--pure sw-nav-button mr-10 text-white"
+          class="flex items-center h-full sf-button--pure sw-nav-button text-white"
           data-testid="login-icon"
           @click="userIconClick"
         >

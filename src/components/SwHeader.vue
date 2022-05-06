@@ -6,10 +6,10 @@
     <SwCookieBar />
 
      <section class="relative">
-      <nav class="relative flex flex-wrap">
-        <div class="flex justify-between w-full bg-abo-primary">
+      <nav class="relative flex flex-wrap bg-abo-primary justify-center">
+        <div class="flex justify-between w-full max-w-screen-xl">
 
-          <div class="px-10 py-2 flex w-full items-center">
+          <div class="pr-10 py-2 flex w-full items-center">
             <SwLogo />
             <SwSearchBar />
           </div>
@@ -27,7 +27,7 @@
             </svg>
           </a>
         </div>
-        <div class="hidden lg:block w-full px-10 py-2 bg-abo-secondary">
+        <div class="hidden lg:flex w-full px-10 py-2 bg-abo-secondary">
             <SwTopNavigation />
         </div>
       </nav>

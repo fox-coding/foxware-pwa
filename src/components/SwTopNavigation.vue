@@ -1,40 +1,43 @@
 <template>
-  <ul
-    class="hidden lg:flex lg:items-center lg:w-auto"
-    data-test-id="sw-top-navigation"
-    v-if="visibleCategories && visibleCategories.length"
-  >
-    <li
-      v-for="category in visibleCategories"
-      :key="getTranslatedProperty(category, 'name')"
-      data-testid="top-navigation-item"
-      @click="changeCurrentCategory(null)"
-    >
-          <a
-            v-if="isLinkCategory(category)"
-            class="sf-header__link inline-block mr-3 py-2 px-4 text-center hover:text-white bg-gray-50 hover:bg-abo-primary rounded-full font-bold font-heading transition duration-200"
-            :href="getCategoryUrl(category)"
-            target="_blank"
-          >
-            {{ getTranslatedProperty(category, "name") }}
-          </a>
-          <nuxt-link
-            v-else
-            class="sf-header__link inline-block mr-3 py-2 px-4 text-center hover:text-white bg-gray-50 hover:bg-abo-primary rounded-full font-bold font-heading transition duration-200"
-            :to="$routing.getUrl(getCategoryUrl(category))"
-            >{{ getTranslatedProperty(category, "name") }}</nuxt-link
-          >
-          <SwMegaMenu
-            v-if="category.children && category.children.length"
-            :category="category"
-            :visible="
-              currentCategoryName &&
-              getTranslatedProperty(category, 'name') === currentCategoryName
-            "
-          />
-    </li>
-    <SwPluginSlot name="sw-top-navigation-after" />
-  </ul>
+  <div class="max-w-screen-xl flex justify-left mx-auto w-full">
+      <ul
+        class="hidden lg:flex lg:items-center lg:w-auto"
+        data-test-id="sw-top-navigation"
+        v-if="visibleCategories && visibleCategories.length"
+      >
+        <li
+          v-for="category in visibleCategories"
+          :key="getTranslatedProperty(category, 'name')"
+          data-testid="top-navigation-item"
+          @click="changeCurrentCategory(null)"
+        >
+              <a
+                v-if="isLinkCategory(category)"
+                class="sf-header__link inline-block mr-3 py-2 px-4 text-center hover:text-white bg-gray-50 hover:bg-abo-primary rounded-full font-bold font-heading transition duration-200"
+                :href="getCategoryUrl(category)"
+                target="_blank"
+              >
+                {{ getTranslatedProperty(category, "name") }}
+              </a>
+              <nuxt-link
+                v-else
+                class="sf-header__link inline-block mr-3 py-2 px-4 text-center hover:text-white bg-gray-50 hover:bg-abo-primary rounded-full font-bold font-heading transition duration-200"
+                :to="$routing.getUrl(getCategoryUrl(category))"
+                >{{ getTranslatedProperty(category, "name") }}</nuxt-link
+              >
+              <SwMegaMenu
+                v-if="category.children && category.children.length"
+                :category="category"
+                :visible="
+                  currentCategoryName &&
+                  getTranslatedProperty(category, 'name') === currentCategoryName
+                "
+              />
+        </li>
+        <SwPluginSlot name="sw-top-navigation-after" />
+      </ul>
+
+  </div>
 </template>
 
 <script>
