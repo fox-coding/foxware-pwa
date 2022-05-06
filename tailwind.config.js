@@ -7,7 +7,8 @@ module.exports = {
     "./src/components/SwSearchBar.vue",
     "./src/components/SwHeaderIcons.vue",
     "./src/components/SwFooter.vue",
-    "./src/components/organisms/SwFooterNavigation.vue"
+    "./src/components/organisms/SwFooterNavigation.vue",
+    "./src/components/SwProductDescription.vue"
   ],
   theme: {
     extend: {

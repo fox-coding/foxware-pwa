@@ -21,6 +21,6 @@ export default {
 @import "@/assets/scss/variables";
 
 .sf-header__logo img {
-  height: 110px;
+  height: 100px;
 }
 </style>

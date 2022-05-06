@@ -37,3 +37,6 @@
 #app{
     font-family: 'Open Sans';
 }
+.prose{
+    max-width: none;
+}

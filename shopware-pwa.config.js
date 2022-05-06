@@ -1,6 +1,6 @@
 module.exports = {
   shopwareEndpoint: "http://localhost",
-  shopwareAccessToken: "SWSCNLLSRDQZVDVTSNVVQMPOWQ",
+  shopwareAccessToken: "SWSCDWFMWDG5ZNBENLNOBGLSDW",
   shopwareDomainsAllowList: ["http://shopware6.abo-dev.de", "http://localhost" ]
 };
 // module.exports = {
