@@ -8,13 +8,22 @@ module.exports = {
     "./src/components/SwHeaderIcons.vue",
     "./src/components/SwFooter.vue",
     "./src/components/organisms/SwFooterNavigation.vue",
-    "./src/components/SwProductDescription.vue"
+    "./src/components/SwProductDescription.vue",
+    "./cms/blocks/CmsBlockAboImageHeroHeading.vue",
   ],
   theme: {
+    typography: {
+      default: {
+        css: {
+          'div.noprose': false,
+        }
+      }
+    },
     extend: {
       colors: {
         'abo-primary': '#006ab3',
         'abo-secondary': '#009fe3',
+        'abo-transparentWhite': '#ffffffde'
       }
     },
   },
