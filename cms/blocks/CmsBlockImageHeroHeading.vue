@@ -1,5 +1,5 @@
 <template>
-  <div class="abo-hero-heading-wrapper relative min-h-[300px]">
+  <div class="hero-heading-wrapper relative min-h-[300px]">
     <CmsGenericElement
           v-if="getImage"
           :content="getImage"
@@ -14,7 +14,7 @@
       <CmsGenericElement
           v-if="getDescription"
           :content="getDescription"
-          class="p-2.5 text-xs w-[500px] bg-abo-transparentWhite text-zinc-600"
+          class="p-2.5 text-xs w-[500px] bg-abo-transparentWhite text-zinc-600 overflow-auto max-h-[75%] max-w-[100%]"
       />
 
     </div>
@@ -29,7 +29,7 @@ export default {
   components: {
     CmsGenericElement,
   },
-  name: "CmsBlockAboImageHeroHeading",
+  name: "CmsBlockImageHeroHeading",
   props: {
     content: {
       type: Object,
@@ -51,13 +51,13 @@ export default {
     },
   },
   mounted(){
-    var target = document.querySelector('.abo-hero-heading-wrapper')
+    var target = document.querySelector('.hero-heading-wrapper')
     target.parentNode.parentNode.classList.remove('sw-default-section--boxed')
   }
 };
 </script>
 <style>
-  .abo-hero-heading-wrapper img{
+  .hero-heading-wrapper img{
     min-height: 300px;
   }
 </style>

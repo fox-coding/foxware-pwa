@@ -33,7 +33,7 @@
     "gallery-buybox": "CmsBlockSplitView",
     "product-description-reviews": "CmsBlockDefault",
     "cross-selling": "CmsBlockDefault",
-    "abo-image-hero-heading": "CmsBlockAboImageHeroHeading"
+    "image-hero-heading": "CmsBlockImageHeroHeading"
   },
   "elements": {
     "product-box": "CmsElementProductCard",
@@ -52,6 +52,7 @@
     "manufacturer-logo": "CmsElementImage",
     "buy-box": "CmsElementBuyBox",
     "product-description-reviews": "CmsElementProductDescriptionReviews",
-    "cross-selling": "CmsElementProductCrossSelling"
+    "cross-selling": "CmsElementProductCrossSelling",
+    "dailymotion": "CmsElementDailymotion"
   }
 }

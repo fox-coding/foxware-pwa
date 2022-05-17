@@ -9,7 +9,7 @@ module.exports = {
     "./src/components/SwFooter.vue",
     "./src/components/organisms/SwFooterNavigation.vue",
     "./src/components/SwProductDescription.vue",
-    "./cms/blocks/CmsBlockAboImageHeroHeading.vue",
+    "./cms/blocks/CmsBlockImageHeroHeading.vue",
   ],
   theme: {
     typography: {
