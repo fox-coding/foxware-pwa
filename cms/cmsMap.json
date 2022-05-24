@@ -53,6 +53,8 @@
     "buy-box": "CmsElementBuyBox",
     "product-description-reviews": "CmsElementProductDescriptionReviews",
     "cross-selling": "CmsElementProductCrossSelling",
-    "dailymotion": "CmsElementDailymotion"
+    "dailymotion": "CmsElementDailymotion",
+    "bgbox": "CmsElementBgbox",
+    "abo-gallery": "CmsElementAboGallery"
   }
 }
