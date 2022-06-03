@@ -10,6 +10,10 @@ module.exports = {
     "./src/components/organisms/SwFooterNavigation.vue",
     "./src/components/SwProductDescription.vue",
     "./cms/blocks/CmsBlockImageHeroHeading.vue",
+    "./cms/elements/CmsElementAboGallery.vue",
+    "./src/components/organisms/AboImageSlider.vue",
+    "./cms/elements/CmsElementBgbox.vue",
+    "./src/pages/aboTeam.vue",
   ],
   theme: {
     typography: {

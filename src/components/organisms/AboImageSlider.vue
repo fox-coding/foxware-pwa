@@ -1,5 +1,5 @@
 <template>
-  <div class="sf-hero">
+  <div>
     <div ref="glide" class="glide">
       <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides sf-hero__slides">
@@ -30,7 +30,7 @@
         />
       </slot>
     </div>
-    <div v-if="numberOfPages > 1" class="sf-hero__bullets">
+    <div v-if="numberOfPages > 1">
       <!--@slot custom markup for pagination bullets -->
       <slot name="bullets" v-bind="{ numberOfPages, page, go }">
         <SfBullets
@@ -41,6 +41,23 @@
         />
       </slot>
     </div>
+
+
+
+
+    <div class="absolute w-1/5 h-full left-0 top-0 overflow-hidden">
+      <div 
+        class="w-24 h-24 border border-gray-300 rounded-sm m-2"
+        v-for="(slide, index) in slides"
+        :key="slide.mediaId"
+        :style="{'background': `url(${slide.mediaUrl})`,'background-size':'contain',}" 
+        @click.stop="go(index)">
+      </div>
+    </div>
+
+
+
+
   </div>
 </template>
 <script>
@@ -64,10 +81,12 @@ export default {
       type: Object,
       default: () => ({}),
     },
+    
   },
   data() {
     return {
       glide: null,
+      slides: this.$attrs.slides,
       defaultOptions: {
         type: "slider",
         rewind: true,
