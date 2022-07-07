@@ -15,6 +15,10 @@ $ yarn start
 
 # generate static project
 $ yarn generate
+
+# generate plugins from backend:
+$ yarn shopware-pwa plugins
+
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

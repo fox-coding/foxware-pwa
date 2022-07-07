@@ -14,6 +14,8 @@ module.exports = {
     "./src/components/organisms/AboImageSlider.vue",
     "./cms/elements/CmsElementBgbox.vue",
     "./src/pages/aboTeam.vue",
+    ".shopware-pwa/pwa-bundles-assets/abo-team/main.vue",
+    ".shopware-pwa/pwa-bundles-assets/abo-contact/main.vue"
   ],
   theme: {
     typography: {
