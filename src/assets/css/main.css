@@ -40,3 +40,6 @@
 .prose{
     max-width: none;
 }
+.prose img{
+    margin: 0;
+}
