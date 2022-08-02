@@ -1,7 +1,7 @@
 <template>
-  <div class="p-6 flex justify-between flex-col">
+  <div class="p-6 flex flex-col">
     <div class="text-base font-bold mb-2">{{ titleText || $t('Shipping address') }}</div>
-    <div class="grow text-sm mb-2" v-if="activeAddress">
+    <div class="text-sm mb-2 min-h-[110px]" v-if="activeAddress">
       <div class="text-sm">
         <div>{{ activeAddress.firstName }} {{ activeAddress.lastName }}</div>
         <div>{{ activeAddress.street }}</div>
