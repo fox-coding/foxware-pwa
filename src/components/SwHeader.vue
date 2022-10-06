@@ -5,6 +5,20 @@
 
     <SwCookieBar />
 
+    <SfTopBar class="sw-top-bar desktop-only" data-testid="top-bar">
+      <template #right>
+        <SwCurrencySwitcher class="sf-header__currency" />
+        <SwLanguageSwitcher />
+        <div v-if="isLoggedIn" class="sw-logged-info">
+          <span v-if="isGuestSession"> {{ $t("Guest session") }} </span>
+          <span v-else> {{ $t("Logged in as", [user.firstName]) }} </span>
+          <SwButton @click="logout" class="sf-button--text">
+            {{ $t("Logout") }}
+          </SwButton>
+        </div>
+      </template>
+    </SfTopBar>
+
      <section class="relative">
       <nav class="relative flex flex-wrap bg-abo-primary justify-center">
         <div class="flex justify-between w-full max-w-screen-xl">
@@ -63,6 +77,12 @@ import SwLogo from "@/components/SwLogo.vue"
 import SwHeaderIcons from "@/components/SwHeaderIcons.vue"
 import SwTopNavigation from "@/components/SwTopNavigation.vue"
 import SwSearchBar from "@/components/SwSearchBar.vue"
+import { SfTopBar } from "@storefront-ui/vue"
+import SwCurrencySwitcher from "@/components/SwCurrencySwitcher.vue"
+import SwLanguageSwitcher from "@/components/SwLanguageSwitcher.vue"
+import { useUser } from "@shopware-pwa/composables"
+import SwButton from "@/components/atoms/SwButton.vue"
+
 
 import SwCookieBar from "@/components/gdpr/SwCookieBar.vue"
 
@@ -73,15 +93,24 @@ export default {
     SwTopBar,
     SwLogo,
     SwHeaderIcons,
+    SfTopBar,
+    SwCurrencySwitcher,
+    SwLanguageSwitcher,
+    SwButton,
     SwTopNavigation,
     SwSearchBar,
     SwCookieBar,
   },
   setup() {
     const { isOpen } = useUIState({ stateName: "MEGA_MENU_OVERLAY_STATE" })
+    const { isGuestSession, isLoggedIn, logout, user } = useUser()
 
     return {
       isOpen,
+      isGuestSession,
+      isLoggedIn,
+      logout,
+      user,
     }
   },
 }

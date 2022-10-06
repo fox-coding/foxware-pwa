@@ -34,7 +34,10 @@
         type="warning"
         class="product-details__alert smartphone-only"
       />
+
+      
       <SfAddToCart
+        v-if="!configuratorID"
         v-model="quantity"
         :stock="stock"
         class="product-details__add-to-cart"
@@ -50,6 +53,10 @@
           </SwButton>
         </template>
       </SfAddToCart>
+
+      <AboConfigurator v-else />
+
+
       <SwPluginSlot
         name="product-page-add-to-cart-button-after"
         :slot-context="product"
@@ -77,12 +84,14 @@ import {
 import { getProductUrl, getTranslatedProperty } from "@shopware-pwa/helpers"
 import { computed, watch, toRefs } from "@vue/composition-api"
 import SwButton from "@/components/atoms/SwButton.vue"
+import AboConfigurator from "./AboConfigurator.vue"
 import SwPluginSlot from "sw-plugins/SwPluginSlot.vue"
 
 export default {
   name: "SwProductDetails",
   components: {
     SfAlert,
+    AboConfigurator,
     SfAddToCart,
     SfLoader,
     SwButton: () => import("@/components/atoms/SwButton.vue"),
@@ -114,6 +123,8 @@ export default {
 
     const stock = computed(() => product.value.stock)
 
+    const configuratorID = computed(() => product.value.customFields["migration_shopwareabo-devde_product_configurator_id"])
+
     // find the best matching variant for current options
     // use it as a callback in handleChange -> onChangeHandled argument
     const onOptionChanged = async (optionId) => {
@@ -143,6 +154,7 @@ export default {
 
     return {
       stock,
+      configuratorID,
       description,
       quantity,
       addToCart,

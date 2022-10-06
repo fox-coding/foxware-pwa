@@ -1,6 +1,7 @@
 import extendNuxtConfig from "@shopware-pwa/nuxt-module/config"
 
 export default extendNuxtConfig({
+  target: 'static',
   head: {
     title: "Shopware PWA",
     meta: [{ hid: "description", name: "description", content: "" }],

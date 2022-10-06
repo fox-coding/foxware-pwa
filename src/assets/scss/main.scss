@@ -12,3 +12,61 @@
 //   font-size: var(--font-size-base);
 //   line-height: 1.6;
 // }
+// we're importing here main style variables from theme
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local("Open Sans"), url(~assets/fonts/OpenSans-Light.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: local("Open Sans"), url(~assets/fonts/OpenSans-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: local("OpenSans"), url(~assets/fonts/OpenSans-SemiBold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: local("OpenSans"), url(~assets/fonts/OpenSans-Bold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: local("OpenSans"), url(~assets/fonts/OpenSans-ExtraBold.ttf) format("truetype");
+    font-style: normal;
+    font-weight: 900;
+}
+
+body {
+    font-family: 'Open Sans';
+    src: local("Open Sans"), url(~assets/fonts/OpenSans-Regular.ttf) format("truetype");
+    font-style:normal;
+    font-weight: 500;
+    font-size: 18px;
+ }
+
+ #footer {
+    font-family: 'Open Sans';
+    src: local("Open Sans"), url(~assets/fonts/OpenSans-Light.ttf) format("truetype");
+    font-style:normal;
+    font-weight: 500;
+    background-color: #e3e3e3;
+
+    h3 {
+        font-family: 'Open Sans';
+        src: local("Open Sans"), url(~assets/fonts/OpenSans-Bold.ttf) format("truetype");
+        font-style:normal;
+        font-weight: 700;
+        font-size: 16px;
+    }
+ }
+

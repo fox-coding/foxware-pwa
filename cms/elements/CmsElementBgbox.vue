@@ -1,5 +1,5 @@
 <template>
-  <div v-html="content.config.content.value"></div>
+  <div :style="{'background-color':content.config.bgColor.value, 'padding':'20px'}" v-html="content.config.content.value"></div>
 </template>
 
 <script>

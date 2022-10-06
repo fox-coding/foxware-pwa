@@ -6,15 +6,19 @@
 # install dependencies
 $ yarn install
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+# in nuxt.config.js:
+target: 'static',
+
+# in firebase.json:
+"public": "dist"
+
+# generate static project
+$ yarn generate
+$ firebase deploy
 
 # build for production and launch server
 $ yarn build
 $ yarn start
-
-# generate static project
-$ yarn generate
 
 # generate plugins from backend:
 $ yarn shopware-pwa plugins

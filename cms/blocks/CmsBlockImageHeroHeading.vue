@@ -16,7 +16,6 @@
           :content="getDescription"
           class="p-2.5 text-xs w-[500px] bg-abo-transparentWhite text-zinc-600 overflow-auto max-h-[75%] max-w-[100%]"
       />
-
     </div>
   </div>
 
